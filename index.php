@@ -1,7 +1,14 @@
 <?php
 $gallery = isset($_GET['gallery']) ? preg_replace('/[^A-Za-z0-9_\-]/', '', $_GET['gallery']) : $defaultDir;
-$images = array_diff(scandir($gallery), array('..', '.'));
+$files = array_diff(scandir($gallery), array('..', '.'));
+
+// Filter out only image files based on their extension
+$images = array_filter($files, function ($file) use ($gallery) {
+	$ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+	return in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp']);
+});
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -43,6 +50,13 @@ $images = array_diff(scandir($gallery), array('..', '.'));
 	<div class="menu-title">Main Menu</div>
 	<ul>
 		<?php foreach ($images as $index => $image): ?>
+			<?php
+			// Check if the file is an image
+			$ext = strtolower(pathinfo($image, PATHINFO_EXTENSION));
+			if (!in_array($ext, ['jpg', 'jpeg', 'png', 'gif', 'webp'])) {
+				continue; // Skip non-image files
+			}
+			?>
 			<li data-index="<?= $index ?>">Page <?= $index - 1 ?></li>
 		<?php endforeach; ?>
 	</ul>
