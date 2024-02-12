@@ -127,9 +127,6 @@ html, body{
 	top: 30px;
 	height: calc(100vh - 60px);
 	width: 280px;
-	border-style: solid;
-	border-width: 0 1px 0 0;
-	border-color: #333;
 	box-shadow: 0 0 20px #000;
 	border-radius:  0 10px 0 0;
 }
@@ -178,24 +175,25 @@ html, body{
 	overflow: hidden;
 	overflow-y: scroll;
 	border-radius:  0 0 10px 0;
+	background-color: rgba(0, 0, 0, 0.9);
 }
 
 #menu ul li {
 	cursor: pointer;
 	padding: 20px;
-	background-color: rgba(0, 0, 0, 0.9);
+	background-color: rgba(0, 0, 0, 0);
 	font-family: "Montserrat", sans-serif;
 	color: #fff;
-	border-width: 0 0 1px 0;
+	border-width: 0 1px 1px 0;
 	border-color: #333;
 	border-style: solid;
 	transition: all 0.5s;
 }
 
 #menu ul li:hover{
-	background-color: #000;
+	background-color: rgba(255, 255, 255, 0.1);
 }
 
 #menu ul li.active {
-	background-color: #000;
+	background-color: rgba(255, 255, 255, 0.075);
 }
