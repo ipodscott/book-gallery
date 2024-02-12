@@ -1,0 +1,20 @@
+name: book-app
+recipe: lamp
+config:
+  php: '8.1'
+  webroot: .
+  database: mysql:8.0
+
+services:
+  appserver:
+    type: php:8.1
+    via: apache
+    webroot: .
+    ssl: true
+  database:
+    type: mysql:8.0
+    portforward: true
+    creds:
+      user: myuser
+      password: mypassword
+      database: mydatabase
