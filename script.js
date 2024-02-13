@@ -9,15 +9,35 @@ document.addEventListener('DOMContentLoaded', function() {
 	const menuToggle = document.getElementById('menu-toggle');
 	const menu = document.getElementById('menu');
 	const slideshow = document.getElementById('slideshow');
+	const menuLink = document.querySelectorAll('.menu-link');
+	
+	// Select all elements with the class 'menu-link'
+	const menuLinks = document.querySelectorAll('.menu-link');
+	
+	// Iterate over each 'menu-link' element
+	menuLinks.forEach(link => {
+		// Attach a click event listener to each link
+		link.addEventListener('click', function() {
+			// Select the element with the ID 'slideshow'
+			const slideshow = document.getElementById('slideshow');
+			
+			// Remove the 'menu-active' class from the 'slideshow' element
+			slideshow.classList.remove('menu-active');
+			menu.classList.remove('show');
+		});
+	});
+
 
 	// Event listener for the toggle button
 	menuToggle.addEventListener('click', function() {
 		menu.classList.toggle('show');
+		slideshow.classList.toggle('menu-active');
 	});
-
+	
 	// Event listener for the slideshow
 	slideshow.addEventListener('click', function() {
 		menu.classList.remove('show');
+		slideshow.classList.remove('menu-active');
 	});
 
 	// Function to change slides

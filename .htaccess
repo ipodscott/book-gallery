@@ -1,9 +1,0 @@
-RewriteEngine On
-# Check if the requested resource is a directory
-RewriteCond %{REQUEST_FILENAME} -d
-# Avoid redirecting for the root directory itself
-RewriteCond %{REQUEST_URI} !^/$
-# Redirect directory access to /?gallery=directoryName, excluding leading 
-and trailing slashes
-RewriteRule ^(.+)/$ /?gallery=$1 [L,R=301]
-
