@@ -39,8 +39,8 @@ html, body{
 	/* display: none; Removed based on your comment */
 	display: block;
 	position: fixed;
-	top: 0; /* Ensure it covers the entire viewport */
-	left: 0; /* Ensure it covers the entire viewport */
+	top: -100000px; /* Ensure it covers the entire viewport */
+	left: -10000vw; /* Ensure it covers the entire viewport */
 	width: 100vw;
 	height: auto;
 	opacity: 0; /* Start fully transparent */
@@ -50,7 +50,9 @@ html, body{
 .slide.active {
 	display: block;
 	position: relative; /* Consider keeping this consistent with the non-active state unless there's a specific reason for the change */
+	left: 0;
 	height: auto;
+	top:0;
 	opacity: 1; /* Fully visible */
 	transition: opacity 1s ease 0.25s; /* Apply transition to opacity with 1s duration and 0.5s delay */
 }
