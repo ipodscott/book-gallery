@@ -39,15 +39,26 @@ document.addEventListener('DOMContentLoaded', function() {
 		menu.classList.remove('show');
 		slideshow.classList.remove('menu-active');
 	});
-
-	// Function to change slides
+	
+	
+	// Function to go to a specific slide with scroll to top
 	function changeSlide(direction) {
 		slides[activeSlide].classList.remove('active');
 		menuItems[activeSlide].classList.remove('active');
 		activeSlide = (activeSlide + direction + slides.length) % slides.length;
 		slides[activeSlide].classList.add('active');
 		menuItems[activeSlide].classList.add('active');
+	
+		// Scroll to the top of the slideshow element
+		scrollToSlide();
 	}
+	
+	// Utility function to scroll to the top of the current active slide
+	function scrollToSlide() {
+		// Assuming the slideshow container is the scroll target
+		slideshow.scrollIntoView();
+	}
+
 
 	// Event listeners for previous and next buttons
 	document.getElementById('prev').addEventListener('click', function() {
@@ -58,14 +69,17 @@ document.addEventListener('DOMContentLoaded', function() {
 		changeSlide(1);
 	});
 
-	// New: Keyboard navigation
+	// New: Keyboard navigation with scroll to top functionality
 	document.addEventListener('keydown', function(event) {
 		if (event.key === 'ArrowRight') {
 			changeSlide(1);
+			// No need to call scrollToSlide here since changeSlide already includes it
 		} else if (event.key === 'ArrowLeft') {
 			changeSlide(-1);
+			// No need to call scrollToSlide here since changeSlide already includes it
 		}
 	});
+
 
 	// Menu item click to go to slide
 	menuItems.forEach((item, index) => {
