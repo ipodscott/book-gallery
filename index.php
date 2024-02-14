@@ -17,7 +17,14 @@ $images = array_filter($files, function ($file) use ($gallery) {
 	@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap')
 	</style>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="apple-mobile-web-app-title" content="Book Reader" />
+	<meta name="apple-mobile-web-app-title" content="Your App Title" />
+	<link rel="apple-touch-icon" sizes="180x180" href="path/to/icon-180x180.png" />
+	<link rel="apple-touch-startup-image" href="path/to/startup-image.png" />
+
 	<title>Image Slideshow</title>
 	<link rel="stylesheet" href="styles.css">
 </head>
