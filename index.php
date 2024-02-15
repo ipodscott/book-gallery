@@ -33,7 +33,7 @@ $images = array_filter($files, function ($file) use ($gallery) {
 <div id="slideshow">
 	<div class="slides" id="slides">
 		<?php foreach ($images as $image): ?>
-			<div class="slide"><img src="/<?= $gallery ?>/<?= $image ?>"></div>
+			<div class="slide"><img src="<?= $gallery ?>/<?= $image ?>"></div>
 		<?php endforeach; ?>
 	</div>
 </div>
@@ -65,10 +65,11 @@ $images = array_filter($files, function ($file) use ($gallery) {
 				continue; // Skip non-image files
 			}
 			?>
-			<li class="menu-link" data-index="<?= $index ?>">Page <?= $index - 1 ?></li>
+			<li class="menu-link" data-index="<?= $index ?>">Page <?= $index - 2 ?></li>
 		<?php endforeach; ?>
 	</ul>
 </div>
+
 
 <script src="script.js"></script>
 </body>

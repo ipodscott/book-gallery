@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
 		});
 	});
 
-
 	// Event listener for the toggle button
 	menuToggle.addEventListener('click', function() {
 		menu.classList.toggle('show');
@@ -56,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	// Utility function to scroll to the top of the current active slide
 	function scrollToSlide() {
 		// Assuming the slideshow container is the scroll target
-		slideshow.scrollIntoView();
+		slideshow.scrollIntoView({ });
 	}
 
 
@@ -95,4 +94,6 @@ document.addEventListener('DOMContentLoaded', function() {
 		slides[activeSlide].classList.add('active');
 		menuItems[activeSlide].classList.add('active');
 	}
+	
+	
 });
