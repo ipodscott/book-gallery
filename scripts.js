@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
         sliderMenu.classList.toggle('show');
         menuToggle.classList.toggle('show');
         slider.classList.toggle('show');
-        body.classList.add('show');
+        body.classList.toggle('show');
     });
     
     
@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
         menuToggle.classList.remove('show');
         slider.classList.remove('show');
         body.classList.remove('show');
+        slider.classList.remove('show');
     });
 
     function showSlide(index) {
