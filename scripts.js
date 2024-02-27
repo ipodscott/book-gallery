@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const slides = document.querySelectorAll('.slide');
     const body = document.getElementById('body');
     const menuItems = document.querySelectorAll('.menu-item');
+    const menuItem = document.querySelectorAll('.menu-item');
     const prevButton = document.getElementById('prev');
     const nextButton = document.getElementById('next');
     const menuToggle = document.getElementById('menu-toggle');
@@ -10,20 +11,24 @@ document.addEventListener('DOMContentLoaded', function () {
     const slider = document.getElementById('slider');
     let currentSlide = 0;
     
+    
+    function closeAll() {
+        sliderMenu.classList.remove('show');
+        menuToggle.classList.remove('show');
+        slider.classList.remove('show');
+        body.classList.remove('show');
+    }
+    
     menuToggle.addEventListener('click', function() {
         sliderMenu.classList.toggle('show');
         menuToggle.classList.toggle('show');
         slider.classList.toggle('show');
         body.classList.toggle('show');
     });
-    
+
     
     slider.addEventListener('click', function() {
-        sliderMenu.classList.remove('show');
-        menuToggle.classList.remove('show');
-        slider.classList.remove('show');
-        body.classList.remove('show');
-        slider.classList.remove('show');
+        closeAll();
     });
 
     function showSlide(index) {
@@ -63,6 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     menuItems.forEach(item => {
         item.addEventListener('click', function() {
+            closeAll();
             const slideIndex = parseInt(this.getAttribute('data-slide'));
             currentSlide = slideIndex;
             showSlide(currentSlide);
