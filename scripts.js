@@ -41,8 +41,6 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
     }
     
-    closeInfo
-    
     closeInfo.addEventListener('click', function() {
         closeAll();
     });

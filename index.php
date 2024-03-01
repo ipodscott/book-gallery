@@ -108,13 +108,10 @@ if (is_dir($path) && file_exists($infoPath)) {
     <?php endif; ?>
 </div>
 
-
-<?php if ($infoContents !== ''): ?>
-    <div id="info-window" class="info-window">
-        <svg id="close-info" class="close-info"><use href="#close"></use></svg>
-        <?php echo($infoContents); ?>
-    </div>
-<?php endif; ?>
+<div id="info-window" class="info-window">
+    <svg id="close-info" class="close-info"><use href="#close"></use></svg>
+    <?php echo($infoContents); ?>
+</div>
 
 <script src="scripts.js"></script>
 </body>
