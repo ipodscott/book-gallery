@@ -9,6 +9,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const sliderMenu = document.getElementById('slider-menu');
     const progressBar = document.getElementById('progress-bar');
     const slider = document.getElementById('slider');
+    const downloadBtn = document.getElementById('download-btn');
+    const downloadWindow = document.getElementById('download-window');
+    const infoButton = document.getElementById('infoButton');
+    const infoWindow = document.getElementById('info-window');
+    const closeInfo = document.getElementById('close-info');
     let currentSlide = 0;
     
     
@@ -17,7 +22,30 @@ document.addEventListener('DOMContentLoaded', function () {
         menuToggle.classList.remove('show');
         slider.classList.remove('show');
         body.classList.remove('show');
+        infoWindow.classList.remove('show');
     }
+    
+    if (downloadBtn) {
+        downloadBtn.addEventListener('click', function() {
+           downloadWindow.classList.toggle('show');
+        });
+    } else {
+    }
+    
+    if (infoButton) {
+        infoButton.addEventListener('click', function() {
+           infoWindow.classList.toggle('show');
+           slider.classList.toggle('show');
+           body.classList.toggle('show');
+        });
+    } else {
+    }
+    
+    closeInfo
+    
+    closeInfo.addEventListener('click', function() {
+        closeAll();
+    });
     
     menuToggle.addEventListener('click', function() {
         sliderMenu.classList.toggle('show');
