@@ -52,6 +52,13 @@ if (is_dir($path) && file_exists($infoPath)) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Your App Name">
+    <link rel="apple-touch-icon" sizes="180x180" href="path/to/icon-180x180.png">
+    <link rel="apple-touch-startup-image" href="path/to/launch-screen.png">
+
     <title>Document Slider</title>
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -68,7 +75,6 @@ if (is_dir($path) && file_exists($infoPath)) {
 <symbol id="arrow-right" viewBox="0 0 29 56"><path d="M.3 55.7c-.4-.4-.4-1 0-1.4l26.3-26.3-26.3-26.3c-.4-.4-.4-1 0-1.4.4-.4 1-.4 1.4 0l27 27c.4.4.4 1 0 1.4l-27 27c-.3.3-1 .4-1.4 0z"></path></symbol>
 
 <symbol id="download" viewBox="0 0 164.3 164.1">
-
   <path d="M155.8,101.6c-4.7,0-8.5,3.8-8.5,8.5v37H17v-37c0-4.7-3.8-8.5-8.5-8.5S0,105.4,0,110.1v45.5c0,4.7,3.8,8.5,8.5,8.5h147.3
     c4.7,0,8.5-3.8,8.5-8.5v-45.5C164.3,105.4,160.5,101.6,155.8,101.6z"/>
   <path d="M25.8,79.2l51,41c1.6,1.3,3.4,1.9,5.3,1.9s3.8-0.6,5.3-1.9l51-41c3.7-2.9,4.2-8.3,1.3-12c-2.9-3.7-8.3-4.2-12-1.3
