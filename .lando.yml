@@ -1,4 +1,4 @@
-name: newgallery
+name: book-gallery
 recipe: lamp
 config:
   webroot: .
