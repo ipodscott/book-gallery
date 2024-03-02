@@ -14,15 +14,28 @@ $archiveUrl = '';
 // Check if the path is a directory
 if (is_dir($path)) {
     // Use glob to find all JPEG, PNG, ZIP, CBR, and CBZ files in the directory
-    foreach (glob($path . '/*.{jpg,jpeg,png,webp,zip,cbr,cbz}', GLOB_BRACE) as $file) {
+    foreach (glob($path . '/*.{jpg,jpeg,png,webp,zip,cbr,cbz,pdf}', GLOB_BRACE) as $file) {
 
         if (preg_match('/\.(jpg|jpeg|png|webp)$/i', $file)) {
             $images[] = $file;
-        } elseif (preg_match('/\.(zip|cbr|cbz)$/i', $file)) {
+        } elseif (preg_match('/\.(zip|cbr|cbz|pdf)$/i', $file)) {
             $archiveUrl = $file;
         }
     }
 }
+
+// Initialize an array to hold archive URLs
+$archiveUrls = [];
+
+// Check if the path is a directory
+if (is_dir($path)) {
+    // Use glob to find all relevant files in the directory
+    foreach (glob($path . '/*.{pdf,zip,cbr,cbz}', GLOB_BRACE) as $file) {
+        // Add file to the array of archives
+        $archiveUrls[] = $file;
+    }
+}
+
 
 // Initialize a variable to hold the contents of info.txt, if it exists
 $infoContents = '';
@@ -102,11 +115,17 @@ if (is_dir($path) && file_exists($infoPath)) {
     
 </div>
 
-<div id="download-window" class="download-window">
-    <?php if ($archiveUrl !== ''): ?>
-        <a class="dl-link" href="<?= htmlspecialchars($archiveUrl); ?>"> <svg><use href="#download"></use></svg> Download</a>
-    <?php endif; ?>
-</div>
+<?php if ($archiveUrl !== ''): ?>
+  <div id="download-window" class="download-window">
+    <?php foreach ($archiveUrls as $archiveUrl): ?>
+      <?php
+        // Extract the file extension and convert it to uppercase for display
+        $fileExtension = strtoupper(pathinfo($archiveUrl, PATHINFO_EXTENSION));
+      ?>
+      <a class="dl-link" href="<?= htmlspecialchars($archiveUrl); ?>">Download | <?= $fileExtension; ?></a>
+    <?php endforeach; ?>
+  </div>
+<?php endif; ?>
 
 <div id="info-window" class="info-window">
     <svg id="close-info" class="close-info"><use href="#close"></use></svg>

@@ -289,7 +289,7 @@ body, p{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #111;
+  background-color: #333;
   min-height: 40px;
   gap: 5px;
   font-weight: 700;
@@ -302,6 +302,11 @@ body, p{
   color: #fff;
   text-decoration: none;
   padding: 10px 0 10px 0;
+  transition: all 0.5s;
+}
+
+.download-window .dl-link:hover{
+  background-color: #000;
 }
 
 .dl-link svg{
