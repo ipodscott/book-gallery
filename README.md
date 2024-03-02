@@ -11,6 +11,7 @@ Designed to be used for scanned document images.
     <li>Fade In/Out Transitions: Adds aesthetic appeal with smooth fade-in and fade-out transitions between slides.</li>
     <li>Responsive Design: Ensures the slideshow is accessible and visually appealing across various devices and screen sizes.</li>
     <li>Toggle Menu Visibility: Includes functionality to show/hide the slide menu, offering a cleaner interface when desired.</li>
+    <li>Dynamic links for document info and and download links for zip, cbz, cbr, pdf</li>
 </ul>
 
 <h2>Setup and Configuration</h2>
