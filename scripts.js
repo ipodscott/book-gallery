@@ -23,13 +23,15 @@ document.addEventListener('DOMContentLoaded', function () {
         slider.classList.remove('show');
         body.classList.remove('show');
         infoWindow.classList.remove('show');
+        if (downloadBtn) {
+            downloadWindow.classList.remove('show');
+        }
     }
     
     if (downloadBtn) {
         downloadBtn.addEventListener('click', function() {
            downloadWindow.classList.toggle('show');
         });
-    } else {
     }
     
     if (infoButton) {
@@ -37,8 +39,10 @@ document.addEventListener('DOMContentLoaded', function () {
            infoWindow.classList.toggle('show');
            slider.classList.toggle('show');
            body.classList.toggle('show');
+           if (downloadBtn) {
+               downloadWindow.classList.remove('show');
+           }
         });
-    } else {
     }
     
     closeInfo.addEventListener('click', function() {
@@ -50,6 +54,9 @@ document.addEventListener('DOMContentLoaded', function () {
         menuToggle.classList.toggle('show');
         slider.classList.toggle('show');
         body.classList.toggle('show');
+        if (downloadBtn) {
+            downloadWindow.classList.remove('show');
+        }
     });
 
     

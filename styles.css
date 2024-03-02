@@ -266,15 +266,15 @@ body, p{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 240px;
+  width: 200px;
   height: auto;
   top:75px;
   right: -340px;
   padding: 3px;
   border-radius: 10px;
   overflow: hidden;
-  background-color: rgba(51, 51, 51, 0.557);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.45);
+  box-shadow: inset 0 0 20px #000;
   transition: all 0.5s;
   opacity: 0;
 }
@@ -289,16 +289,15 @@ body, p{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #333;
-  min-height: 40px;
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  border-color: rgba(153, 153, 153, 0.7);
+  min-height: 30px;
   gap: 5px;
   font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
   width: 100%;
-  border-style: solid;
-  border-color: #666;
-  border-width: 0 0 1px 0;
   color: #fff;
   text-decoration: none;
   padding: 10px 0 10px 0;
@@ -316,8 +315,13 @@ body, p{
   height: 36px;
 }
 
+.download-window .dl-link:first-child{
+  border-radius: 10px 10px 0 0;
+}
+
 .download-window .dl-link:last-child{
   border: none;
+  border-radius: 0 0 10px 10px;
 }
 
 .info-window{
