@@ -231,6 +231,8 @@ body, p{
   overflow: hidden;
   cursor: pointer;
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 36px;
   height: 36px;
   padding: 3px;
@@ -241,11 +243,15 @@ body, p{
 
 .download-btn svg{
   fill:#fff;
+  width: 24px;
+  height: 24px;
 }
 
 .info-btn{
   overflow: hidden;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 36px;
   height: 36px;
   padding: 3px;
@@ -257,6 +263,9 @@ body, p{
 
 .info-btn svg{
   fill:#fff;
+  width: 24px;
+  height: 24px;
+  background-color: #336699;
 }
 
 .download-window{
@@ -266,7 +275,7 @@ body, p{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 200px;
+  width: 220px;
   height: auto;
   top:75px;
   right: -340px;
@@ -293,7 +302,7 @@ body, p{
   border-width: 0 0 1px 0;
   border-color: rgba(153, 153, 153, 0.7);
   min-height: 30px;
-  gap: 5px;
+  gap: 15px;
   font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
@@ -310,9 +319,8 @@ body, p{
 
 .dl-link svg{
   fill:#fff;
-  width:36px;
-  scale: 0.9;
-  height: 36px;
+  width: 14px;
+  height: 14px;
 }
 
 .download-window .dl-link:first-child{
