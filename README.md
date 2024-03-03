@@ -10,7 +10,8 @@ Designed to be used for scanned document images.
     <li>Interactive Menu: A menu lists all the slides, allowing users to select and jump directly to any slide. The menu also highlights the current slide being viewed.</li>
     <li>Fade In/Out Transitions: Adds aesthetic appeal with smooth fade-in and fade-out transitions between slides.</li>
     <li>Responsive Design: Ensures the slideshow is accessible and visually appealing across various devices and screen sizes.</li>
-    <li>Toggle Menu Visibility: Includes functionality to show/hide the slide menu, offering a cleaner interface when desired.</li>
+    <li>The option to include additional document information via both data.json and info.txt. within each individual gallery directory.</li>
+    <li>Includes navigation options to show and download multiple file type downloads zip, cbz, cbr, rar, and pdf</li>
 </ul>
 
 <h2>Setup and Configuration</h2>
