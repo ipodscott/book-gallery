@@ -1,4 +1,4 @@
-<h1>Dynamic Image Slideshow Project</h1>
+<h1>Dynamic Book Scan Reader Project</h1>
 <p>This project presents a dynamic image slideshow application designed using PHP, vanilla JavaScript, CSS, and HTML. It is crafted to automatically detect images within a specified directory and render them into a slideshow, complete with navigation controls for a seamless user experience.
 Designed to be used for scanned document images.
 </p>
