@@ -340,10 +340,8 @@ body, p{
   z-index: 999;
   max-width: 960px;
   width: calc(100% - 80px);
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.6);
   height: auto;
-  max-height: calc(100vh - 80px);
-  overflow-y: scroll;
   transform: translateX(-50%);
   left: 50%;
   border-radius: 10px;
@@ -351,6 +349,11 @@ body, p{
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   color: #fff;
   opacity: 0;
+}
+
+.info-contents{
+  max-height: calc(100vh - 80px);
+  overflow-y: scroll;
 }
 
 .info-window.show{
@@ -363,7 +366,12 @@ body, p{
   width: 22px;
   height: 22px;
   position: fixed;
-  top:10px;
-  right: 10px;
+  top: 2px;
+  right: 0;
   cursor: pointer;
+}
+.info-title{
+  margin: 0;
+  padding: 0;
+  font-size: calc(18px + (28 - 18) * ((100vw - 300px) / (1600 - 300)));
 }

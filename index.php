@@ -47,6 +47,27 @@ if (is_dir($path) && file_exists($infoPath)) {
     $infoContents = file_get_contents($infoPath);
 }
 
+// Assuming $gallery is already set based on the query string
+
+// Set the path to the gallery's data.json file
+$jsonFilePath = 'gallery/' . $gallery . '/data.json';
+
+// Initialize variables to hold the JSON data
+$galleryTitle = '';
+$galleryInfo = '';
+$galleryInfoImg = '';
+
+// Check if the data.json file exists
+if (file_exists($jsonFilePath)) {
+    // Read and decode the JSON file
+    $jsonData = json_decode(file_get_contents($jsonFilePath), true);
+    
+    // Assign the JSON data to variables
+    $galleryTitle = $jsonData['title'] ?? '';
+    $galleryInfo = $jsonData['info'] ?? '';
+    $galleryInfoImg = $jsonData['info-img'] ?? '';
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -147,8 +168,19 @@ if (is_dir($path) && file_exists($infoPath)) {
 <?php endif; ?>
 
 <div id="info-window" class="info-window">
+    <div class="info-contents">
+      <?php if ($galleryTitle): ?>
+          <h1 class="info-title"><?= htmlspecialchars($galleryTitle); ?></h1>
+      <?php endif; ?>
+      <?php if ($galleryInfoImg): ?>
+          <img src="<?= htmlspecialchars($galleryInfoImg); ?>" alt="Gallery Information Image" class="info-img">
+      <?php endif; ?>
+      <?php if ($galleryInfo): ?>
+          <div class="info-copy"><?= htmlspecialchars($galleryInfo); ?></div>
+      <?php endif; ?>
+      <div class="additional-info"><?php echo($infoContents); ?></div>
+    </div>
     <svg id="close-info" class="close-info"><use href="#close"></use></svg>
-    <?php echo($infoContents); ?>
 </div>
 
 <script src="scripts.js"></script>
