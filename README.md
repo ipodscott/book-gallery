@@ -12,6 +12,7 @@ Designed to be used for scanned document images.
     <li>Responsive Design: Ensures the slideshow is accessible and visually appealing across various devices and screen sizes.</li>
     <li>The option to include additional document information via both data.json and info.txt. within each individual gallery directory.</li>
     <li>Includes navigation options to show and download multiple file type downloads zip, cbz, cbr, rar, and pdf</li>
+    <li>Progress bar to track reading progress.</li>
 </ul>
 
 <h2>Setup and Configuration</h2>
