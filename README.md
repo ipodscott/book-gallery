@@ -4,7 +4,10 @@ Designed to be used for scanned document images.
 </p>
 
 <h2>Samples</h2>
-<p><a href="https://www.hazzardlabs.com/book-gallery/?gallery=images" target="_blank">https://www.hazzardlabs.com/book-gallery/?gallery=images</a></p>
+<p>
+    <a href="https://www.hazzardlabs.com/book-gallery/?gallery=images" target="_blank">https://www.hazzardlabs.com/book-gallery/?gallery=images</a><br />
+    <a href="https://www.hazzardlabs.com/book-gallery/?gallery=spirit-460106" target="_blank">https://www.hazzardlabs.com/book-gallery/?gallery=spirit-460106</a><br />
+</p>
 
 <h2>Features</h2>
 <ul>
