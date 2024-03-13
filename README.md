@@ -3,6 +3,9 @@
 Designed to be used for scanned document images.
 </p>
 
+<h2>Samples</h2>
+<p><a href="https://www.hazzardlabs.com/book-gallery/?gallery=images" target="_blank">https://www.hazzardlabs.com/book-gallery/?gallery=images</a></p>
+
 <h2>Features</h2>
 <ul>
     <li>Automatic Image Detection: Scans a specified directory for images, dynamically creating a slideshow.</li>
