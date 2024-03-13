@@ -7,6 +7,7 @@ Designed to be used for scanned document images.
 <p>
     <a stlye="color:#fff;" href="https://www.hazzardlabs.com/book-gallery/?gallery=images" target="_blank">https://www.hazzardlabs.com/book-gallery/?gallery=images</a><br />
     <a stlye="color:#fff;" href="https://www.hazzardlabs.com/book-gallery/?gallery=spirit-460106" target="_blank">https://www.hazzardlabs.com/book-gallery/?gallery=spirit-460106</a><br />
+    <a href="https://www.hazzardlabs.com/book-gallery/?gallery=captain-hazzard">https://www.hazzardlabs.com/book-gallery/?gallery=captain-hazzard</a>
 </p>
 
 <h2>Features</h2>
