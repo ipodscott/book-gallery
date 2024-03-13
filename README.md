@@ -5,7 +5,7 @@ Designed to be used for scanned document images.
 
 <h2>Samples</h2>
 <p>
-    <a style="color:#fff;" href="https://www.hazzardlabs.com/book-gallery/?gallery=images" target="_blank">https://www.hazzardlabs.com/book-gallery/?gallery=images</a><br />
+    <a style="color:#fff; !important;" href="https://www.hazzardlabs.com/book-gallery/?gallery=images" target="_blank">https://www.hazzardlabs.com/book-gallery/?gallery=images</a><br />
     <a style="color:#fff;" href="https://www.hazzardlabs.com/book-gallery/?gallery=spirit-460106" target="_blank">https://www.hazzardlabs.com/book-gallery/?gallery=spirit-460106</a><br />
     <a style="color:#fff;" href="https://www.hazzardlabs.com/book-gallery/?gallery=captain-hazzard">https://www.hazzardlabs.com/book-gallery/?gallery=captain-hazzard</a>
 </p>
