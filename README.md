@@ -20,11 +20,14 @@ Designed to be used for scanned document images.
 <ol>
     <li>Ensure you have a PHP server environment set up.</li>
     <li>Place your image files in the designated images directory. The application supports organizing images into subdirectories for different galleries.</li>
-    <li>Access the slideshow by navigating to the project's URL, optionally specifying a gallery using the <code>?gallery=yourDirectoryName</code> query parameter.</li>
+    <li>Access the slideshow by navigating to the project's URL, optionally specifying a gallery using the <code>?books=yourDirectoryName</code> query parameter.</li>
 </ol>
 
 <h2>Usage</h2>
 <p>Interact with the slideshow using the on-screen controls or your keyboard's arrow keys for navigation. Click on the menu to select a specific slide or use the toggle button to show/hide the menu.</p>
+
+<h2>Builder</h2>
+<p>To easily modify the the data.json for homepage content and menus their is builder that will let you easily import, export, and edit the data.json.</p>
 
 <h2>Customization</h2>
 <p>This project is designed for easy customization. Feel free to modify the CSS for personal styling preferences or adjust the JavaScript for additional functionalities.</p>
