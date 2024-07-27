@@ -26,5 +26,8 @@ Designed to be used for scanned document images.
 <h2>Usage</h2>
 <p>Interact with the slideshow using the on-screen controls or your keyboard's arrow keys for navigation. Click on the menu to select a specific slide or use the toggle button to show/hide the menu.</p>
 
+<h2>Builder</h2>
+<p>To easily modify the the data.json for homepage content and menus their is builder that will let you easily import, export, and edit the data.json.</p>
+
 <h2>Customization</h2>
 <p>This project is designed for easy customization. Feel free to modify the CSS for personal styling preferences or adjust the JavaScript for additional functionalities.</p>
