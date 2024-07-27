@@ -28,7 +28,8 @@ Designed to be used for scanned document images.
 
 <h2>Builder</h2>
 <p>To easily modify the the data.json for homepage content and menus their is builder that will let you easily import, export, and edit the data.json.</p>
-<img src="https://raw.githubusercontent.com/ipodscott/book-gallery/main/builder1.webp"/>
+<img src="https://raw.githubusercontent.com/ipodscott/book-gallery/main/builder1.webp"/><br />
+<img src="https://raw.githubusercontent.com/ipodscott/book-gallery/main/builder2.webp"/>
 
 <h2>Customization</h2>
 <p>This project is designed for easy customization. Feel free to modify the CSS for personal styling preferences or adjust the JavaScript for additional functionalities.</p>
