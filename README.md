@@ -20,7 +20,7 @@ Designed to be used for scanned document images.
 <ol>
     <li>Ensure you have a PHP server environment set up.</li>
     <li>Place your image files in the designated images directory. The application supports organizing images into subdirectories for different galleries.</li>
-    <li>Access the slideshow by navigating to the project's URL, optionally specifying a gallery using the <code>?gallery=yourDirectoryName</code> query parameter.</li>
+    <li>Access the slideshow by navigating to the project's URL, optionally specifying a gallery using the <code>?books=yourDirectoryName</code> query parameter.</li>
 </ol>
 
 <h2>Usage</h2>
