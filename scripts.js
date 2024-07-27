@@ -44,48 +44,54 @@ document.addEventListener('DOMContentLoaded', function () {
            }
         });
     }
-    
+    if (closeInfo) {
     closeInfo.addEventListener('click', function() {
         closeAll();
     });
+    }
     
     menuToggle.addEventListener('click', function() {
         sliderMenu.classList.toggle('show');
         menuToggle.classList.toggle('show');
-        slider.classList.toggle('show');
+        if(slider){
+            slider.classList.toggle('show');
+            }
         body.classList.toggle('show');
         if (downloadBtn) {
             downloadWindow.classList.remove('show');
         }
     });
 
+    if(slider){
+                slider.addEventListener('click', function() {
+                    closeAll();
+                });
+       
     
-    slider.addEventListener('click', function() {
-        closeAll();
-    });
-
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.classList.remove('active');
-            menuItems[i].classList.remove('active');
-            if (i === index) {
-                slide.classList.add('active');
-                menuItems[i].classList.add('active');
-                slide.style.opacity = 0;
-                setTimeout(() => slide.style.opacity = 1, 100);
-            }
-        });
-        updateProgressBar(index);
-        // Scroll to the top of the slider or document when changing slides.
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        document.body.scrollTop = 0; // For Safari
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                menuItems[i].classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                    menuItems[i].classList.add('active');
+                    slide.style.opacity = 0;
+                    setTimeout(() => slide.style.opacity = 1, 100);
+                }
+            });
+            updateProgressBar(index);
+            // Scroll to the top of the slider or document when changing slides.
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            document.body.scrollTop = 0; // For Safari
+        }
+        
+        if(progressBar){
+        function updateProgressBar(index) {
+            const progress = ((index + 1) / slides.length) * 100;
+            progressBar.style.width = `${progress}%`;
+        }
+        }
     }
-
-    function updateProgressBar(index) {
-        const progress = ((index + 1) / slides.length) * 100;
-        progressBar.style.width = `${progress}%`;
-    }
-
     function navigateSlides(direction) {
         if (direction === 'next') {
             currentSlide = (currentSlide + 1) % slides.length;
@@ -94,11 +100,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         showSlide(currentSlide);
     }
-
-    prevButton.addEventListener('click', () => navigateSlides('prev'));
-
+    if(prevButton){
+        prevButton.addEventListener('click', () => navigateSlides('prev'));
+    }
+    if(nextButton){
     nextButton.addEventListener('click', () => navigateSlides('next'));
-
+    }
+    
     menuItems.forEach(item => {
         item.addEventListener('click', function() {
             closeAll();
@@ -115,7 +123,8 @@ document.addEventListener('DOMContentLoaded', function () {
             navigateSlides('prev');
         }
     });
-
+ if(slider){
     // Initialize the slider
     showSlide(currentSlide);
+}
 });
