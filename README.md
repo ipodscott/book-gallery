@@ -27,7 +27,7 @@ Designed to be used for scanned document images.
 <p>Interact with the slideshow using the on-screen controls or your keyboard's arrow keys for navigation. Click on the menu to select a specific slide or use the toggle button to show/hide the menu.</p>
 
 <h2>Builder</h2>
-<p>To easily modify the the data.json for homepage content and menus their is builder that will let you easily import, export, and edit the data.json.</p>
+<p>To easily modify the the data.json for homepage content and menus a builder application is available /builder/ to help import, export, and edit the data.json.</p>
 <img src="https://raw.githubusercontent.com/ipodscott/book-gallery/main/builder1.webp"/><br />
 <img src="https://raw.githubusercontent.com/ipodscott/book-gallery/main/builder2.webp"/>
 
